@@ -38,7 +38,7 @@ sub _is_script {
     my $is_module = $filename =~ m{ \.pm \z }xms;
 
     # For now, only run this for controller modules (Kernel/Modules/*, Kernel/Output/HTML/)
-    $is_module &&= $filename =~ m{ Kernel/Modules | Kernel/Output/HTML }xms;
+    $is_module &&= $filename =~ m{ Kernel/Modules }xms;
 
     return !$is_module;
 }
