@@ -20,9 +20,10 @@ sub applies_to           { return 'PPI::Token::Word'  }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if $elem ne 'open';
     return $self->violation( $DESC, $EXPL, $elem );
 }
 
 1;
+

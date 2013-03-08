@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitDumper;
 
+# ABSTRACT: Check module for use of "Dumper"
+
 use strict;
 use warnings;
 
@@ -8,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Readonly::Scalar my $DESC => q{Use of "Dumper" is not allowed.};
 Readonly::Scalar my $EXPL => q{Use "Dump" method of MainObject instead};
@@ -20,8 +22,8 @@ sub applies_to           { return 'PPI::Token::Word' }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
-    return if $elem ne 'Dumper';
+
+    return if $elem ne 'Dumper' && $elem ne 'Data::Dumper::Dumper';
     return if !is_function_call( $elem );
     return $self->violation( $DESC, $EXPL, $elem );
 }

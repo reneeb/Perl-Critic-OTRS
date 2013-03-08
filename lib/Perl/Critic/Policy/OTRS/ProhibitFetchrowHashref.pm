@@ -20,12 +20,12 @@ sub applies_to           { return 'PPI::Token::Operator' }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if $elem ne '->';
-    
+
     my $method = $elem->snext_sibling;
     return if $method ne 'FetchrowHashref';
-    
+
     return $self->violation( $DESC, $EXPL, $elem );
 }
 
