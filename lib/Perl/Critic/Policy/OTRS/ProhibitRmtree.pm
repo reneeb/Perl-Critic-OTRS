@@ -10,19 +10,6 @@ use base 'Perl::Critic::Policy';
 
 our $VERSION = '1.01';
 
-=pod
-
-=head1 NAME
-
-Perl::Critic::Policy::OTRS::ProhibitRmtree - Check module for "rmtree"
-
-
-=head1 DESCRIPTION
-
-Prohibit usage of rmtree(), it is obsolete and not thread safe in some versions of perl.
-
-=cut
-
 Readonly::Scalar my $DESC => q{ ERROR: Don't use File::Path::rmtree(). };
 Readonly::Scalar my $EXPL => q{ It is obsolete and not thread safe in some versions of perl. Use File::Path::remove_tree() instead.' };
 

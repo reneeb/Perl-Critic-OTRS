@@ -32,27 +32,3 @@ sub violates {
 }
 
 1;
-__END__
-=pod
-
-=head1 NAME
-
-Perl::Critic::Policy::OTRS::ProhibitLowPrecendeceOps
-
-=head1 VERSION
-
-version 0.02
-
-=head1 AUTHOR
-
-Renee Baecker <module@renee-baecker.de>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2010 by Renee Baecker.
-
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
-
-=cut
