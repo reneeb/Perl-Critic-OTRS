@@ -3,7 +3,7 @@ package Perl::Critic::OTRS;
 use warnings;
 use strict;
 
-# ABSTRACT A collection of handy Perl::Critic policies
+# ABSTRACT: A collection of handy Perl::Critic policies
 
 =head1 VERSION
 
