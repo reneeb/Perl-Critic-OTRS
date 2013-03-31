@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::RequireTrueReturnValueForModules;
 
+# ABSTRACT: Check if modules have a "true" return value
+
 use strict;
 use warnings;
 
@@ -8,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Readonly::Scalar my $DESC => q{Modules have to return a true value ("1;")};
 Readonly::Scalar my $EXPL => q{Use "1;" as the last statement of the module};
@@ -20,7 +22,7 @@ sub applies_to           { return 'PPI::Document' }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if $self->_is_script( $elem );
     return if $self->_returns_1( $elem );
     return $self->violation( $DESC, $EXPL, $elem );
@@ -28,19 +30,21 @@ sub violates {
 
 sub _returns_1 {
     my ( $self, $elem ) = @_;
-    
-    my $last_statement = $elem->last_element( 'PPI::Statement' );
+
+    my $last_statement = ( grep{ ref $_ eq 'PPI::Statement' }$elem->schildren )[-1];
+    return 0 if !$last_statement;
     return 1 if $last_statement eq '1;';
+    return 0;
 }
 
 sub _is_script {
     my ( $self, $elem ) = @_;
-    
+
     my $document = $elem->document;
     my $filename = $document->logical_filename;
-    
+
     my $is_module = $filename =~ m{ \.pm \z }xms;
-    
+
     return !$is_module;
 }
 

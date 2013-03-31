@@ -20,15 +20,20 @@ sub applies_to           { return 'PPI::Token::Operator' }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if $elem ne '->';
-    
+
     my $method = $elem->snext_sibling;
+
+    # $Variable->();
+    return if ref $method eq 'PPI::Structure::List';
+
+    # $Variable->method();
     return if ref $method eq 'PPI::Structure::Subscript';
-    
+
     my $list   = $method->snext_sibling;
     return if ref $list eq 'PPI::Structure::List';
-    
+
     return $self->violation( $DESC, $EXPL, $elem );
 }
 

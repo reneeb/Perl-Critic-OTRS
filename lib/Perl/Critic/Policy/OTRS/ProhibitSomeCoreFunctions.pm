@@ -22,7 +22,7 @@ my @prohibited = qw(print die exit);
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if !grep{ $elem eq $_ }@prohibited;
     return if $self->_is_script( $elem );
     return $self->violation( $DESC, $EXPL, $elem );
@@ -30,12 +30,16 @@ sub violates {
 
 sub _is_script {
     my ( $self, $elem ) = @_;
-    
+
     my $document = $elem->document;
     my $filename = $document->logical_filename;
-    
+
+    # This applies only to modules, not scripts.
     my $is_module = $filename =~ m{ \.pm \z }xms;
-    
+
+    # For now, only run this for controller modules (Kernel/Modules/*, Kernel/Output/HTML/)
+    $is_module &&= $filename =~ m{ Kernel/Modules }xms;
+
     return !$is_module;
 }
 

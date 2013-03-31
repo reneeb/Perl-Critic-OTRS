@@ -26,7 +26,7 @@ sub applies_to           { return 'PPI::Token::Operator'  }
 
 sub violates {
     my ( $self, $elem ) = @_;
-    
+
     return if !grep{ $elem eq $_ }keys %lowprecendece;
     return $self->violation( $DESC, $EXPL, $elem );
 }
