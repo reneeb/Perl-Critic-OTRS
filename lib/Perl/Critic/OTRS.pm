@@ -7,11 +7,11 @@ use strict;
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -36,10 +36,6 @@ project itself does.
 
 So every programmer who is familiar with the OTRS codebase can read and follow
 your code.
-
-=head1 AUTHOR
-
-Renee Baecker, C<< <module@renee-baecker.de> >>
 
 =head1 BUGS
 
@@ -89,18 +85,7 @@ Thanks to
 
 =item * Martin Edenhofer for creating a great tool like OTRS
 
-=back
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2010 Renee Baecker.
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of:
-
-=over 4
-
-=item * the Artistic License version 2.0.
+=item * Martin Gruner for improvements for this module
 
 =back
 
