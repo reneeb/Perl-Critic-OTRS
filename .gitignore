@@ -1,3 +1,4 @@
 .project
+.build
 Perl-Critic-OTRS*
 *.swp
