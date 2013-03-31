@@ -7,11 +7,11 @@ use strict;
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -27,6 +27,24 @@ The rules included with the Perl::Critic::OTRS group include:
 Kernel::System::DB provides a method called C<FetchrowHashref>, but this method
 is deprecated as this relies on C<DBI>'s fetchrow_hashref. Some users have
 reported problems with it on some database systems.
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitDumper>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitLocaltime>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitOpen>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitRequire>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitSomeCoreFunctions>
+
+=head2 L<Perl::Critic::Policy::OTRS::RequireCamelCase>
+
+=head2 L<Perl::Critic::Policy::OTRS::RequireParensWithMethods>
+ 
+=head2 L<Perl::Critic::Policy::OTRS::RequireTrueReturnValueForModules>
 
 =head1 WHY A COLLECTION OF OTRS POLICIES?
 
