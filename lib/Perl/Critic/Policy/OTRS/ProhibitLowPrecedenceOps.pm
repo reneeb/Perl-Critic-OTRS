@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::OTRS::ProhibitLowPrecendeceOps;
+package Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps;
 
 use strict;
 use warnings;
@@ -13,7 +13,7 @@ our $VERSION = '0.01';
 Readonly::Scalar my $DESC => q{Use of low precedence operators is not allowed};
 Readonly::Scalar my $EXPL => q{Replace low precedence operators with the high precedence substitutes};
 
-my %lowprecendece = (
+my %lowprecedence = (
   not => '!',
   and => '&&',
   or  => '||',
@@ -27,7 +27,7 @@ sub applies_to           { return 'PPI::Token::Operator'  }
 sub violates {
     my ( $self, $elem ) = @_;
 
-    return if !grep{ $elem eq $_ }keys %lowprecendece;
+    return if !grep{ $elem eq $_ }keys %lowprecedence;
     return $self->violation( $DESC, $EXPL, $elem );
 }
 
