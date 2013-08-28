@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitLocaltime;
 
+# ABSTRACT: do not use "localtime"
+
 use strict;
 use warnings;
 
@@ -26,3 +28,4 @@ sub violates {
 }
 
 1;
+

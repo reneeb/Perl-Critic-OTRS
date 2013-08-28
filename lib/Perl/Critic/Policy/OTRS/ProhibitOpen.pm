@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitOpen;
 
+# ABSTRACT: Do not use "open"
+
 use strict;
 use warnings;
 

@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitFetchrowHashref;
 
+# ABSTRACT: Do no use FetchrowHashref
+
 use strict;
 use warnings;
 
@@ -30,3 +32,4 @@ sub violates {
 }
 
 1;
+

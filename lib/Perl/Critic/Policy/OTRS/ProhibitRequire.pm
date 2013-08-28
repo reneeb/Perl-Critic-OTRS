@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitRequire;
 
+# ABSTRACT: Do not use "require"
+
 use strict;
 use warnings;
 

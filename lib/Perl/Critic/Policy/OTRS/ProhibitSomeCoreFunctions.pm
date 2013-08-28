@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitSomeCoreFunctions;
 
+# ABSTRACT: Some core functions should not be used
+
 use strict;
 use warnings;
 
@@ -44,3 +46,4 @@ sub _is_script {
 }
 
 1;
+

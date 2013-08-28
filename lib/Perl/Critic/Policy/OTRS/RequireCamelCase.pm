@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::RequireCamelCase;
 
+# ABSTRACT: Variable, subroutine, and package names have to be in CamelCase
+
 use strict;
 use warnings;
 

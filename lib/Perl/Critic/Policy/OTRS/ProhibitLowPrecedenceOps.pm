@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps;
 
+# ABSTRACT: Do not use "not", "and" and other low precedence operators
+
 use strict;
 use warnings;
 
@@ -32,3 +34,4 @@ sub violates {
 }
 
 1;
+

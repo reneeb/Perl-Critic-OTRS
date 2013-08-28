@@ -1,5 +1,7 @@
 package Perl::Critic::Policy::OTRS::ProhibitRmtree;
 
+# ABSTRACT: Do not use File::Path's rmtree
+
 use strict;
 use warnings;
 
@@ -32,3 +34,4 @@ sub violates {
 }
 
 1;
+
