@@ -7,11 +7,11 @@ use strict;
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
@@ -104,6 +104,8 @@ Thanks to
 =item * Martin Edenhofer for creating a great tool like OTRS
 
 =item * Martin Gruner for improvements for this module
+
+=item * Michiel Beijen for improvements for this module
 
 =back
 

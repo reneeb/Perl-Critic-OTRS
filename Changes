@@ -1,8 +1,12 @@
 Release history for Perl::Critic::OTRS
 
+0.04    28 Aug 2013
+        + fix typo in module name (Precendece -> Precedence) (Michiel Beijen)
+        + fix variable name (Michiel Beijen)
+
 0.03    01 Apr 2013
-        + Only run tests for Code in Kernel/Modules
-        + other code improvements
+        + Only run tests for Code in Kernel/Modules (Martin Gruner)
+        + other code improvements (Martin Gruner)
 
 0.02    05 Jan 2012
         + fix some bugs
