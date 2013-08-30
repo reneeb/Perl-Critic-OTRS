@@ -10,14 +10,14 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Readonly::Scalar my $DESC => q{Variable, subroutine, and package names have to be in CamelCase};
 Readonly::Scalar my $EXPL => q{};
 
 sub supported_parameters { return; }
 sub default_severity     { return $SEVERITY_HIGHEST; }
-sub default_themes       { return qw( otrs ) }
+sub default_themes       { return qw( otrs otrs_lt_3_3 ) }
 
 my %dispatcher = (
     'PPI::Statement::Sub'     => \&_is_camelcase,
@@ -52,6 +52,9 @@ sub _is_camelcase {
         return 1;
     }
     elsif ( $elem->isa( 'PPI::Statement::Package' ) and $name eq 'main' ) {
+        return 1;
+    }
+    elsif ( $elem->isa( 'PPI::Statement::Package' ) and $name =~ m{ \A t:: }x ) {
         return 1;
     }
     elsif ( $elem->isa( 'PPI::Statement::Package' ) and $name =~ m{ Language :: [a-z]{2,3}_ }xms ) {

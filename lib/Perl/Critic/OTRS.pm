@@ -5,13 +5,7 @@ use strict;
 
 # ABSTRACT: A collection of handy Perl::Critic policies
 
-=head1 VERSION
-
-Version 0.04
-
-=cut
-
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -35,6 +29,8 @@ reported problems with it on some database systems.
 =head2 L<Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps>
 
 =head2 L<Perl::Critic::Policy::OTRS::ProhibitOpen>
+
+=head2 L<Perl::Critic::Policy::OTRS::ProhibitPushISA>
 
 =head2 L<Perl::Critic::Policy::OTRS::ProhibitRequire>
 

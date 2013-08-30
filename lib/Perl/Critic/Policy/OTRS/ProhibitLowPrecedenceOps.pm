@@ -10,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Readonly::Scalar my $DESC => q{Use of low precedence operators is not allowed};
 Readonly::Scalar my $EXPL => q{Replace low precedence operators with the high precedence substitutes};
@@ -23,7 +23,7 @@ my %lowprecedence = (
 
 sub supported_parameters { return; }
 sub default_severity     { return $SEVERITY_HIGHEST; }
-sub default_themes       { return qw( otrs ) }
+sub default_themes       { return qw( otrs otrs_lt_3_3 ) }
 sub applies_to           { return 'PPI::Token::Operator'  }
 
 sub violates {

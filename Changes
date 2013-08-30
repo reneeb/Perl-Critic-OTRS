@@ -1,5 +1,13 @@
 Release history for Perl::Critic::OTRS
 
+0.05    30 Aug 2013
+        + added more tests
+        + added new theme: 
+            - otrs_lt_3_3 as new methods were introduced in OTRS 3.3 (RequireBaseClass)
+            - old policies belong to themes otrs and otrs_lt_3_3
+        + added new policy:
+            - ProhibitPushISA (theme: otrs)
+
 0.04    28 Aug 2013
         + fix typo in module name (Precendece -> Precedence) (Michiel Beijen)
         + fix variable name (Michiel Beijen)

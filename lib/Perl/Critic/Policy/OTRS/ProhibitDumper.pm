@@ -10,14 +10,14 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 Readonly::Scalar my $DESC => q{Use of "Dumper" is not allowed.};
 Readonly::Scalar my $EXPL => q{Use "Dump" method of MainObject instead};
 
 sub supported_parameters { return; }
 sub default_severity     { return $SEVERITY_HIGHEST; }
-sub default_themes       { return qw( otrs ) }
+sub default_themes       { return qw( otrs otrs_lt_3_3 ) }
 sub applies_to           { return 'PPI::Token::Word' }
 
 sub violates {
