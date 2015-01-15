@@ -1,4 +1,11 @@
 Release history for Perl::Critic::OTRS
+======================================
+
+0.06  2015-01-15
+
+  [MISC]
+  * Add metaresources
+  * Add TODO
 
 0.05    30 Aug 2013
         + added more tests
