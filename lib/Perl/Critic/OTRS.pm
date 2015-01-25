@@ -5,7 +5,7 @@ use strict;
 
 # ABSTRACT: A collection of handy Perl::Critic policies
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 SYNOPSIS
 
@@ -57,11 +57,13 @@ Thanks to
 
 =over 4
 
-=item * Martin Edenhofer for creating a great tool like OTRS
+=item * L<Martin Edenhofer|https://github.com/martini> for creating a great tool like OTRS
 
-=item * Martin Gruner for improvements for this module
+=item * L<Martin Gruner|https://github.com/mgruner> for improvements for this module
 
-=item * Michiel Beijen for improvements for this module
+=item * L<Michiel Beijen|https://github.com/mbeijen> for improvements for this module
+
+=item * L<Ramanan Balakrishnan|https://github.com/ramananbalakrishnan> for fixing test failures
 
 =back
 

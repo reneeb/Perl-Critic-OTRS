@@ -2,7 +2,6 @@ TODO
 ====
 
  * Update Changes file to meet Changes spec
- * Fix Windows test failures: http://matrix.cpantesters.org/?dist=Perl-Critic-OTRS;os=mswin32;reports=1
  * add new theme for OTRS4 (add all existing policies to that theme)
  * add documentation to policies (what is a do/don't)
  * ProhibitOpen: only prohibit the open when it is the Core function (Module::Name->open() should be allowed)
