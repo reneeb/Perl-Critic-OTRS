@@ -17,6 +17,8 @@ my %modules = (
 
 my $dir = dirname __FILE__;
 
+plan skip_all =>'This test is not run on Windows machines' if $^O eq 'MSWin32';
+
 my $pc = Perl::Critic->new( -'single-policy' => 'OTRS::ProhibitSomeCoreFunctions' );
 
 for my $module ( keys %modules ) {
