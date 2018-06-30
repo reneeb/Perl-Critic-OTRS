@@ -67,6 +67,10 @@ Thanks to
 
 =back
 
+=head1 LICENSE
+
+This distribution is released under the Artistic License 2.0
+
 =cut
 
 1; # End of Perl::Critic::OTRS
