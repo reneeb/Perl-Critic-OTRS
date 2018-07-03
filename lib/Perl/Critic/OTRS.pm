@@ -3,9 +3,13 @@ package Perl::Critic::OTRS;
 use warnings;
 use strict;
 
-# ABSTRACT: A collection of handy Perl::Critic policies
-
 our $VERSION = '0.07';
+
+=pod
+
+=head1 NAME
+
+Perl::Critic::OTRS - A collection of handy Perl::Critic policies
 
 =head1 SYNOPSIS
 
