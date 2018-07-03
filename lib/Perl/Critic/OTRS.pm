@@ -63,6 +63,8 @@ Thanks to
 
 =item * L<Michiel Beijen|https://github.com/mbeijen> for improvements for this module
 
+=item * L<Pete Houston|https://github.com/openstrike> for lots of pull requests that improve the quality/kwalitee of the module
+
 =item * L<Ramanan Balakrishnan|https://github.com/ramananbalakrishnan> for fixing test failures
 
 =back
