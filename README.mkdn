@@ -1,0 +1,123 @@
+[![Build Status](https://travis-ci.org/reneeb/Perl-Critic-OTRS.svg?branch=master)](https://travis-ci.org/reneeb/Perl-Critic-OTRS)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Perl-Critic-OTRS.png)](http://cpants.charsbar.org/dist/overview/Perl-Critic-OTRS)
+[![GitHub issues](https://img.shields.io/github/issues/reneeb/Perl-Critic-OTRS.svg)](https://github.com/reneeb/Perl-Critic-OTRS/issues)
+
+# NAME
+
+Perl::Critic::OTRS - A collection of handy Perl::Critic policies
+
+# VERSION
+
+version 0.08
+
+# SYNOPSIS
+
+Perl::Critic::OTRS is a collection of Perl::Critic policies that
+will help to program in the OTRS way of programming
+
+# DESCRIPTION
+
+The rules included with the Perl::Critic::OTRS group include:
+
+## [Perl::Critic::Policy::OTRS::ProhibitFetchrowHashref](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitFetchrowHashref)
+
+Kernel::System::DB provides a method called `FetchrowHashref`, but this method
+is deprecated as this relies on `DBI`'s fetchrow\_hashref. Some users have
+reported problems with it on some database systems.
+
+## [Perl::Critic::Policy::OTRS::ProhibitDumper](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitDumper)
+
+## [Perl::Critic::Policy::OTRS::ProhibitLocaltime](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitLocaltime)
+
+## [Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitLowPrecedenceOps)
+
+## [Perl::Critic::Policy::OTRS::ProhibitOpen](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitOpen)
+
+## [Perl::Critic::Policy::OTRS::ProhibitPushISA](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitPushISA)
+
+## [Perl::Critic::Policy::OTRS::ProhibitRequire](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitRequire)
+
+## [Perl::Critic::Policy::OTRS::ProhibitSomeCoreFunctions](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::ProhibitSomeCoreFunctions)
+
+## [Perl::Critic::Policy::OTRS::RequireCamelCase](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::RequireCamelCase)
+
+## [Perl::Critic::Policy::OTRS::RequireParensWithMethods](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::RequireParensWithMethods)
+
+## [Perl::Critic::Policy::OTRS::RequireTrueReturnValueForModules](https://metacpan.org/pod/Perl::Critic::Policy::OTRS::RequireTrueReturnValueForModules)
+
+# WHY A COLLECTION OF OTRS POLICIES?
+
+The policies bundled in this distributions represent the coding guideline
+provided by the OTRS project. It's always a good idea to program the way the
+project itself does.
+
+So every programmer who is familiar with the OTRS codebase can read and follow
+your code.
+
+# ACKNOWLEDGMENTS
+
+Thanks to
+
+- [Martin Edenhofer](https://github.com/martini) for creating a great tool like OTRS
+- [Martin Gruner](https://github.com/mgruner) for improvements for this module
+- [Michiel Beijen](https://github.com/mbeijen) for improvements for this module
+- [Pete Houston](https://github.com/openstrike) for lots of pull requests that improve the quality/kwalitee of the module
+- [Ramanan Balakrishnan](https://github.com/ramananbalakrishnan) for fixing test failures
+
+
+
+## Development
+
+The distribution is contained in a Git repository, so simply clone the
+repository
+
+```
+$ git clone http://github.com/reneeb/Perl-Critic-OTRS.git
+```
+
+and change into the newly-created directory.
+
+```
+$ cd Perl-Critic-OTRS
+```
+
+The project uses [`Dist::Zilla`](https://metacpan.org/pod/Dist::Zilla) to
+build the distribution, hence this will need to be installed before
+continuing:
+
+```
+$ cpanm Dist::Zilla
+```
+
+To install the required prequisite packages, run the following set of
+commands:
+
+```
+$ dzil authordeps --missing | cpanm
+$ dzil listdeps --author --missing | cpanm
+```
+
+The distribution can be tested like so:
+
+```
+$ dzil test
+```
+
+To run the full set of tests (including author and release-process tests),
+add the `--author` and `--release` options:
+
+```
+$ dzil test --author --release
+```
+
+# AUTHOR
+
+Renee Baecker &lt;module@renee-baecker.de>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by Renee Baecker.
+
+This is free software, licensed under:
+
+    The Artistic License 2.0 (GPL Compatible)
