@@ -8,7 +8,7 @@ Perl::Critic::OTRS - A collection of handy Perl::Critic policies
 
 # VERSION
 
-version 0.08
+version 0.09
 
 # SYNOPSIS
 
@@ -66,7 +66,7 @@ Thanks to
 
 
 
-## Development
+# Development
 
 The distribution is contained in a Git repository, so simply clone the
 repository
@@ -112,7 +112,7 @@ $ dzil test --author --release
 
 # AUTHOR
 
-Renee Baecker &lt;module@renee-baecker.de>
+Renee Baecker <info@perl-services.de>
 
 # COPYRIGHT AND LICENSE
 
