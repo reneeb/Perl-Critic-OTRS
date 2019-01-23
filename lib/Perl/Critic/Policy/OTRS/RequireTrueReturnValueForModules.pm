@@ -10,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 Readonly::Scalar my $DESC => q{Modules have to return a true value ("1;")};
 Readonly::Scalar my $EXPL => q{Use "1;" as the last statement of the module};
@@ -49,3 +49,14 @@ sub _is_script {
 }
 
 1;
+
+=pod
+
+=head1 METHODS
+
+=head2 supported_parameters
+
+There are no supported parameters.
+
+=cut
+

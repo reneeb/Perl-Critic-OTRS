@@ -10,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Readonly::Scalar my $DESC => q{Use of "push @ISA, ..." is not allowed};
 Readonly::Scalar my $EXPL => q{Use RequireBaseClass method of MainObject instead.};
@@ -42,4 +42,14 @@ sub violates {
 }
 
 1;
+
+=pod
+
+=head1 METHODS
+
+=head2 supported_parameters
+
+There are no supported parameters.
+
+=cut
 

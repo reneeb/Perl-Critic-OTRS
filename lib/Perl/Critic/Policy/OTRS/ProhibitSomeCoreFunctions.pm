@@ -10,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 Readonly::Scalar my $DESC => q{Use of "print", "die", and "exit" in modules is not allowed};
 Readonly::Scalar my $EXPL => q{Use methods of LayoutObject or MainObject instead.};
@@ -49,4 +49,14 @@ sub _is_script {
 }
 
 1;
+
+=pod
+
+=head1 METHODS
+
+=head2 supported_parameters
+
+There are no supported parameters.
+
+=cut
 

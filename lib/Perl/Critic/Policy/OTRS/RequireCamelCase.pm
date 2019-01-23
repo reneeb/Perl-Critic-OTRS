@@ -10,7 +10,7 @@ use base 'Perl::Critic::Policy';
 
 use Readonly;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 Readonly::Scalar my $DESC => q{Variable, subroutine, and package names have to be in CamelCase};
 Readonly::Scalar my $EXPL => q{};
@@ -26,7 +26,7 @@ my %dispatcher = (
 );
 
 sub applies_to {
-    keys %dispatcher,
+    sort keys %dispatcher,
 }
 
 sub violates {
@@ -91,4 +91,14 @@ sub _variable_is_camelcase {
 }
 
 1;
+
+=pod
+
+=head1 METHODS
+
+=head2 supported_parameters
+
+There are no supported parameters.
+
+=cut
 
